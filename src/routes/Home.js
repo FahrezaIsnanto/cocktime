@@ -6,34 +6,35 @@ import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 
 function Home() {
-    const [loading, setLoading] = useState(false);
-    const [data, setData] = useState([]);
+//     const [loading, setLoading] = useState(false);
+//     const [data, setData] = useState([]);
 
-    const url = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+//     const url = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
     
-    const fetchCocktailHandler = useCallback(()=>{
-        setLoading(true);
+//     const fetchCocktailHandler = useCallback(()=>{
+//         setLoading(true);
 
-        axios 
-        .get(url)
-        .then((res)=>{
-            console.log(res.data);
-            setData(res.data.drinks);
-        })
-        .catch((e) => console.log(e))
-        .finally(()=> setLoading(false));
-},[]);
+//         axios 
+//         .get(url)
+//         .then((res)=>{
+//             console.log(res.data);
+//             setData(res.data.drinks);
+//         })
+//         .catch((e) => console.log(e))
+//         .finally(()=> setLoading(false));
+// },[]);
 
-    useEffect(()=>{
-        fetchCocktailHandler();
-        }, [fetchCocktailHandler]);
+//     useEffect(()=>{
+//         fetchCocktailHandler();
+//         }, [fetchCocktailHandler]);
 
-    if (loading){
-        return<h2>Loading...</h2>;
-    }
+//     if (loading){
+//         return<h2>Loading...</h2>;
+//     }
 
     return (
         <>
+        
             <Navbar />
             <Hero
                 cName="hero"
@@ -44,7 +45,7 @@ function Home() {
                 url="/"
                 btnClass="show"
             />
-            <CocktailCard cName="cCard"/>
+            <CocktailCard className="cCard"/>
             <Footer/>
             {/* {!data || isLoading ? (
                 <p>Loading...</p>

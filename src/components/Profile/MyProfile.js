@@ -15,7 +15,7 @@ export default function MyProfile() {
             </div>
             
             <div className="profile-picture">
-                    <img src={foto} alt=""/>
+                    <img src={foto} alt="" className="image-alya"/>
             </div>
         </div>
 

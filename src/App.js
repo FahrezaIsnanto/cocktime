@@ -4,6 +4,7 @@ import Home from "./routes/Home";
 import About from "./routes/About";
 import Profile from "./routes/Profile";
 import Favorite from "./routes/Favorite";
+import Detail from './routes/Detail';
 
 export default function App(){
     return(
@@ -13,6 +14,7 @@ export default function App(){
           <Route path="/about" element={<About/>}/>
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/favorite" element={<Favorite/>}/>
+          <Route path="/detail" element={<Detail/>}/>
         </Routes>
 
       </div>

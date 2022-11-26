@@ -15,7 +15,7 @@ class DataMenu extends Component{
             </div>
 
 
-        </div>  
+        </div> 
         );
     };
 }
