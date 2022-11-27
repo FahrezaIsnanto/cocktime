@@ -8,8 +8,8 @@ function CocktailCard() {
     const [data, setData] = useState([]);
 
     const navigate = useNavigate();
-    const goToDetail = () => {
-        navigate("/detail")
+    const goToDetail = (idDrink) => {
+        navigate("/detail/"+idDrink);
     }
 
     const url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic";
@@ -36,7 +36,7 @@ function CocktailCard() {
     }
     return <div className="card">
         {data.map((cocktail) => (
-                <div key={cocktail.idDrink} className="card-img" onClick={goToDetail}>
+                <div key={cocktail.idDrink} className="card-img" onClick={()=>goToDetail(cocktail.idDrink)}>
                     <img className="imageCard" src={cocktail.strDrinkThumb} alt="#" />
                     <h2 className="titlecard">{cocktail.strDrink}</h2>
                 </div>
